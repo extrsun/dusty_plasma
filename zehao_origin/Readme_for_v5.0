@@ -1,0 +1,44 @@
+########About ATOMDB version
+To switch the ATOMDB version these codes used:
+	Step1:change the "version" variable on ****constants.py***** to the version you want.(format '3.0.8')
+	Step2:change the version of ATOMDB. 
+		you may use the following code in python: 
+			import pyatomdb
+		 	pyatomdb.util.switch_version('version number') ##format '3.0.8'
+
+#######Guide
+****
+Step 0: Run following two script to Generate data packages which will be used by almost every other script
+			ionfrac_data.py
+			eperionperbin_data.py
+
+Step 1: plot ionic fraction by 
+			plot_ionfrac.py
+
+Step 2: plot emissivity curve by
+			pltemicurve.py
+
+Step 3: plot Gauss center by
+			pltgausscenter.py
+
+Step 4: plot theoretical spectrum by
+			pltspec.py
+
+Step 5: Response spectrum with Chandra/Astro-H SXS response file by
+		First run
+			generate_spec.py
+		then run
+			plot_response_Chandra
+			plot_response_Astro-H
+
+Step 6: plot Astro-H response graph with same y-scale for comparison by
+			plot_response_Astro-H_ylim.py
+
+Step 7: Compare the emissivity curve with different ATOMDB version by
+		***make sure you have used *ionfrac_data.py* and *eperionperbin_data.py* to generate different versions of data
+		First run
+			pltemicurve_data.py
+		then run
+			emicurve_difference.py
+
+
